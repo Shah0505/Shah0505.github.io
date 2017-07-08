@@ -1,0 +1,73 @@
+angular.module("GuitarApp",["controllermodule","ngRoute",'ui.bootstrap',"ngAnimate"])
+    .config(
+             function($routeProvider){
+   /* $stateProvider
+    .state("home",{
+        url:"/home",
+        templateUrl:"Script/home/home.html",
+        controller:"homecontroller"
+    })
+    .state("about",{
+        url:"/about",
+        templateUrl:"Script/about/about.html",
+        controller:"aboutcontroller"
+    })
+    .state("gridshop",{
+        url:"/gridshop",
+        templateUrl:"Script/gridshop/gridshop.html",
+       controller:"gridshopcontroller"
+    })
+    .state("listshop",{
+        url:"/listshop",
+        templateUrl:"Script/listshop/listshop.html",
+        controller:"listshopcontroller"
+    })
+    .state("shopnow",{
+        url:"/shopnow",
+        templateUrl:"Script/Shopnow/shopnow.html",
+        controller:"shopnowcontroller"
+    })
+    .state("thanks",{
+        url:"/thanks",
+        templateUrl:"Script/Shopnow/thanks.html",
+    });
+    $urlRouterProvider.otherwise('/home');         
+   */ 
+    /*
+    $locationProvider.html5Mode({
+  enabled: true
+});*/
+      $routeProvider.when("/home",{
+        templateUrl:"Script/home/home.html",
+        controller:"homecontroller"
+    })
+    .when("/about",{
+        templateUrl:"Script/about/about.html",
+        controller:"aboutcontroller"
+    })
+    .when("/gridshop",{
+        templateUrl:"Script/gridshop/gridshop.html",
+        controller:"gridshopcontroller"
+    })
+    .when("/listshop",{
+        templateUrl:"Script/listshop/listshop.html",
+        controller:"listshopcontroller"
+    })
+    .when("/shopnow",{
+        templateUrl:"Script/Shopnow/shopnow.html",
+        controller:"shopnowcontroller"
+    })
+    .when("/buy",{
+        templateUrl:"Script/Shopnow/shopform.html",
+        controller:"shopnowcontroller"
+    })
+      
+    .when("/thanks",{
+        templateUrl:"Script/Shopnow/thanks.html",
+        controller:"thankscontroller"
+    })
+    .otherwise({
+        redirectTo:"/home"
+    });
+    
+});
